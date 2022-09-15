@@ -76,9 +76,9 @@ if(opcionElegida === 4){
 }
 
 if(opcionElegida === 5){
-    console.log("Opcion 1: " + plus)
-    console.log("Opcion 2: " + oro)
-    console.log("Opcion 3: " + platinum)
+    console.log("Opcion 1: " + plus.nombre)
+    console.log("Opcion 2: " + oro.nombre)
+    console.log("Opcion 3: " + platinum.nombre)
     console.log("Opcion 4: Armar mi propio paquete")
 
     let opcionUno = 6000
