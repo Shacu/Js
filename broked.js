@@ -15,6 +15,23 @@ const prendas = [buzoUno, buzoDos, pantalonCargo, remeraUno, remeraDos]
 
 const carrito = []
 
+const cardPrendas = document.getElementById("cardPrendas");
+
+prendas.forEach( ropa => {
+    let card = document.createElement("card");
+    card.innerHTML = ` <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title"> ${ropa.nombre} </h5>
+                            <p class="card-text"> Esta ropa es muy comoda, muy barata y you now :) tan solo por $ ${ropa.precio} </p>
+                            <a href="#" class="btn btn-primary"> Compra aca! </a>
+                            </div>
+                        </div> `;
+
+    cardPrendas.appendChild(card);
+})
+
+
 alert("Buenos dias! Bienvenido a nuestra tienda online");
 
 let nombreUsuario = prompt("ingrese su nombre: ");
