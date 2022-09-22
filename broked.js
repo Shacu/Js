@@ -84,3 +84,24 @@ if(sumarCarrito === "buzo uno" || sumarCarrito === "buzo dos" || sumarCarrito ==
     }
 }
 console.log(carrito)
+
+const formDatos = document.getElementById("formDatos");
+
+formDatos.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const direccion = document.getElementById("direccion");
+    const nombre = document.getElementById("nombre");
+
+    alert(`su prenda sera enviada a ${direccion.value} y debera ser recibida por ${nombre.value}. Muchas gracias por su compra!`);
+
+    formDatos.reset();
+});
+
+const direccionFinal = document.getElementById("direccionFinal");
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+    direccionFinal.innerText = `su prenda sera enviada a ${direccion.value} y debera ser recibida por ${nombre.value}. Muchas gracias por su compra!`;
+});
