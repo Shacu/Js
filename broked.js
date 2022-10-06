@@ -48,6 +48,13 @@ prendas.forEach( ropa => {
     boton.addEventListener(`click`, () => {
         agregarAlCarrito(ropa.id)
     })
+
+    boton.addEventListener("click", () => {
+        Toastify({
+            text: "Producto agregado exitosamente al carrito",
+            duration: 3000,
+        }).showToast();
+    })
 })
 
 const agregarAlCarrito = (prodId) => {
@@ -192,3 +199,10 @@ const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
     direccionFinal.innerText = `su prenda sera enviada a ${direccion.value} y debera ser recibida por ${nombre.value}. Muchas gracias por su compra!`;
 });
+
+vaciarCarrito.addEventListener("click", () => {
+    Toastify({
+        text: "El carrito se vacio correctamente",
+        duration: 3000,
+    }).showToast()
+})
