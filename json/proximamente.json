@@ -1,0 +1,5 @@
+[
+    {"nombre": "gorra 1", "precio": "1500", "img": "./img/gorra1.jpg"},
+    {"nombre": "gorra 2", "precio": "1500", "img": "./img/gorra2.jpg"},
+    {"nombre": "shores oversize", "precio": "4500", "img": "./img/cortos.jpg"}
+]

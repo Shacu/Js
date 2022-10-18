@@ -206,3 +206,24 @@ vaciarCarrito.addEventListener("click", () => {
         duration: 3000,
     }).showToast()
 })
+
+const proximamenteCard = document.getElementById("proximamenteCard");
+
+const proximosProductos = "json/proximamente.json";
+
+fetch(proximosProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+            datos.forEach(producto => {
+                proximamenteCard.innerHTML += `
+                <div class="card col-xl-3" style="width: 18rem;">
+                            <img src=" ${producto.img}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title"> ${producto.nombre} </h5>
+                            <p class="card-text"> Precio estimado $ ${producto.precio} </p>
+                            </div>
+                        </div>
+                `
+            })
+    })
+    .catch(error => console.log(error));
