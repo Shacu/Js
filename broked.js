@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 prendas.forEach( ropa => {
     let card = document.createElement("card");
-    card.innerHTML = ` <div class="card col-xl-3" style="width: 18rem;">
+    card.innerHTML = ` <div class="cards card col-xl-3" style="width: 18rem;">
                             <img src=" ${ropa.img}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title"> ${ropa.nombre} </h5>
@@ -116,68 +116,10 @@ const calcularTotalCompra = () => {
     precioTotal.innerHTML = total;
 };
 
-/* const guardadoStorage = () => {
-    carrito.forEach(producto => {
-        productoJSON = JSON.stringify(producto);
-    })
-    localStorage.setItem("1234", productoJSON);
-    console.log(productoJSON);
-};
-console.log(guardadoStorage); */
-
-
-alert("Buenos dias! Bienvenido a nuestra tienda online");
-
 let nombreUsuario = prompt("ingrese su nombre: ");
 
 console.log("Bienvenido " + nombreUsuario + ", esta es una lista de todos nuestros productos")
 
-/* for(let i = 0; i < prendas.length; i++ ){
-    console.log(prendas[i]);
-}
-
-let sumarCarrito = prompt("Ingrese el nombre del producto que desea sumar al carrito")
-let precioCarrito = 0
-let suma = (a, b) => {
-    return a + b;
-}
-while(sumarCarrito != "buzo uno" && sumarCarrito != "buzo dos" && sumarCarrito != "pantalon cargo" && sumarCarrito != "remera uno" && sumarCarrito != "remera dos"){
-    alert("no tenemos ese producto, por favor ingrese algun producto que tengamos en stock");
-    sumarCarrito = prompt("Ingrese el nombre del producto que desea sumar al carrito")
-}
-
-if(sumarCarrito === "buzo uno" || sumarCarrito === "buzo dos" || sumarCarrito === "pantalon cargo" || sumarCarrito === "remera uno" || sumarCarrito === "remera dos"){
-    switch(sumarCarrito){
-        case "buzo uno":
-            console.log("su buzo se agrego correctamente al carrito")
-            console.log("el precio de su carrito es de: $" + suma(precioCarrito, buzoUno.precio))
-            carrito.push(buzoUno)
-            break
-        case "buzo dos":
-            console.log("su buzo se agrego correctamente al carrito")
-            console.log("el precio de su carrito es de: $" + suma(precioCarrito, buzoDos.precio))
-            carrito.push(buzoDos)
-            break
-        case "pantalon cargo":
-            console.log("su pantalon fue agregado correctamente al carrito")
-            console.log("el precio de su carrito es de: $" + suma(precioCarrito, pantalonCargo.precio))
-            carrito.push(pantalonCargo)
-            break
-        case "remera uno":
-            console.log("su remera fue agregada correctamente al carrito")
-            console.log("el precio de su carrito es de: $" + suma(precioCarrito, remeraUno.precio))
-            carrito.push(remeraUno)
-            break
-        case "remera dos":
-            console.log("su remera fue agregada correctamente al carrito")
-            console.log("el precio de su carrito es de: $" + suma(precioCarrito, remeraDos.precio))
-            carrito.push(remeraDos)
-            break
-        default:
-            break
-    }
-}
-console.log(carrito) */
 
 const formDatos = document.getElementById("formDatos");
 
