@@ -116,9 +116,7 @@ const calcularTotalCompra = () => {
     precioTotal.innerHTML = total;
 };
 
-let nombreUsuario = prompt("ingrese su nombre: ");
-
-console.log("Bienvenido " + nombreUsuario + ", esta es una lista de todos nuestros productos")
+console.log("Bienvenido usuario, esta es una lista de todos nuestros productos")
 
 
 const formDatos = document.getElementById("formDatos");
